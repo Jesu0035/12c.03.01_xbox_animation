@@ -2,9 +2,8 @@
   margin: 10px;
   box-sizing: border-box;
 }
-
-body {
-  background-color: rgb(245, 243, 243);
+s body {
+  background-color: rgb(19, 9, 9);
 }
 
 /* :root {
@@ -21,7 +20,7 @@ body {
 
 #product-preview {
   grid-area: product;
-  box-shadow: 3px 3px 8px rgb(172, 40, 40);
+  box-shadow: 3px 3px 8px rgb(20, 19, 19);
   border-radius: 1em;
   position: relative;
   transition: opacity ease-in 0.5s;
@@ -29,12 +28,20 @@ body {
 
 #product-preview img {
   position: absolute;
-  width: 50%; /*100%*/
+  width: 33%;
   height: auto;
-  top: 0;
-  left: 0;
+  display: flex;
+  top: 2vw;
+  left: 19vw;
 }
-
+.hide2 {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  display: flex;
+  top: -2vw;
+  left: 19vw;
+}
 #product-preview .hide {
   opacity: 0;
 }
@@ -133,6 +140,15 @@ body {
 .color_btn {
   cursor: pointer;
 }
+
+#color-box {
+  position: relative;
+  width: 30px;
+  height: auto;
+  top: 2vw;
+  left: 5vw;
+  display: inline;
+}
 .g_to_interact_with {
   fill: transparent;
 }
@@ -141,7 +157,8 @@ path {
 }
 
 .SvgContainer {
-  left: 150px;
+  left: 15vw;
+  top: 10vw;
   position: relative;
   grid-template-columns: auto;
   flex-direction: column;
@@ -149,7 +166,7 @@ path {
 }
 h1 {
   text-align: center;
-  color: #c74829;
+  color: #24201f;
   text-transform: uppercase;
   font-family: monospace;
   font-size: 3rem;

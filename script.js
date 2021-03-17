@@ -50,7 +50,7 @@ let response = await fetch('xbox_01-01.svg')
      /* this function make the lines blue so we can select the place  */ 
     function theMouseover(){
         console.log(this); 
-        this.style.stroke = "red";
+        this.style.stroke = "blue";
     }
     /* this function makes desapear the blue stroke when we move the mouse */ 
     function theMouseout(){
