@@ -2,10 +2,10 @@
 
 // The model of all features
 const features = {
-  drinksholder: false,
+  Holder_phone: false,
   led: false,
   propeller: false,
-  shield: false,
+  shield_black: false,
   solarfan: false
 };
 

@@ -2,8 +2,8 @@
   margin: 10px;
   box-sizing: border-box;
 }
-s body {
-  background-color: rgb(19, 9, 9);
+body {
+  background-color: rgb(255, 255, 255);
 }
 
 /* :root {
@@ -34,14 +34,14 @@ s body {
   top: 2vw;
   left: 19vw;
 }
-.hide2 {
+/* .hide2 {
   position: absolute;
   width: 50%;
   height: auto;
   display: flex;
   top: -2vw;
   left: 19vw;
-}
+} */
 #product-preview .hide {
   opacity: 0;
 }
@@ -52,7 +52,7 @@ s body {
 
 #options {
   grid-area: options;
-  box-shadow: 3px 3px 8px #ddd;
+  box-shadow: 3px 3px 8px rgb(20, 19, 19);
   border-radius: 1em;
   padding: 1em;
   display: flex;
@@ -139,6 +139,8 @@ s body {
 }
 .color_btn {
   cursor: pointer;
+  margin: 10px;
+  color: #000;
 }
 
 #color-box {
@@ -146,7 +148,7 @@ s body {
   width: 30px;
   height: auto;
   top: 2vw;
-  left: 5vw;
+  left: 8vw;
   display: inline;
 }
 .g_to_interact_with {
@@ -175,40 +177,44 @@ h1 {
 image {
   pointer-events: none;
 }
-
-/* * {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(243, 239, 239);
-}
-.color_btn {
-  cursor: pointer;
-}
-.g_to_interact_with {
-  fill: transparent;
-}
-path {
-  stroke-width: 2;
-}
-
-.SvgContainer {
-  left: 300px;
+#btn_black #btn_black2 {
   position: relative;
-  grid-template-columns: auto;
-  flex-direction: column;
-  width: 50%;
+  display: flexbox;
+  top: -22vw;
+  width: 50px;
+  height: auto;
+  left: 30.5vw;
 }
-.title {
-  text-align: center;
-  color: #c74829;
-  text-transform: uppercase;
-  font-family: monospace;
-  font-size: 3rem;
-  top: 150px;
+
+#btn_red #btn_red {
+  position: relative;
+  display: flexbox;
+  top: -29.5vw;
+  width: 50px;
+  height: auto;
+  left: 19.75vw;
 }
-image {
-  pointer-events: none;
-} */
+#guld #guld2 {
+  position: relative;
+  display: flexbox;
+  top: -35.5vw;
+  width: 10vw;
+  height: auto;
+  left: 14.5vw;
+  z-index: 500;
+}
+#feature1 {
+  width: 10vw;
+  height: auto;
+}
+.cabeza {
+  display: flex;
+  height: 50px;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(67, 66, 73);
+  position: relative;
+  z-index: 1;
+}
