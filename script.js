@@ -17,7 +17,7 @@ let elementToPaint
  console.log("start");
   // register toggle-clicks
 /* her Im tryin to fetch this but doesn work */ 
-let response = await fetch('xbox_01-01.svg')
+let response = await fetch('xbox_A-01.svg')
     let mySvgData = await response.text( );
     document.querySelector('section').innerHTML = mySvgData;
 
