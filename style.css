@@ -76,7 +76,7 @@ body {
 }
 
 #options .option img {
-  width: 7vw;
+  width: 3vw;
   height: auto;
 }
 
@@ -137,7 +137,11 @@ body {
 .color_btn {
   cursor: pointer;
   margin: 10px;
-  color: #000;
+  color: rgb(32, 209, 62);
+  border-radius: 200px;
+  width: 100 px;
+  height: 100 px;
+  background-color: rgb(17, 19, 16);
 }
 
 #color-box {

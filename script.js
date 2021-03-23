@@ -3,9 +3,9 @@
 // The model of all features
 const features = {
   Holder_phone: false,
-  led: false,
-  propeller: false,
-  shield_black: false,
+  black_botton: false,
+  red_botton: false,
+  gold: false,
   solarfan: false
 };
 
@@ -13,11 +13,10 @@ window.addEventListener("DOMContentLoaded", start);
 
 let elementToPaint 
 
-  async function start(){
+async function start(){
  console.log("start");
   // register toggle-clicks
-/* her Im tryin to fetch this but doesn work */ 
-let response = await fetch('xbox_A-01.svg')
+let response = await fetch('MasterNoelB-01.svg')
     let mySvgData = await response.text( );
     document.querySelector('section').innerHTML = mySvgData;
 
@@ -45,7 +44,7 @@ let response = await fetch('xbox_A-01.svg')
     function theClick(){
         console.log(this);
         elementToPaint = this; 
-        this.style.fill = "grey"; 
+        this.style.fill = "white"; 
     }
      /* this function make the lines blue so we can select the place  */ 
     function theMouseover(){
@@ -86,20 +85,18 @@ function toggleOption(event) {
   // - find the existing featureElement in #selected ul
   // - create FLIP-animation to animate featureElement to img in target
   // - when animation is complete, remove featureElement from the DOM
-
-
   
   if (features[feature] === true) {
     //Select target and add chosen class
     target.classList.add("chosen"); 
 
     //Remove the hide class 
-    document.querySelector(`[data-feature="${feature}"`).classList.remove("hide"); 
+    document.querySelector(`[data-feature="${feature}"]`).classList.remove("hide"); 
 
      //Create new featureElement and add it to the list
     const newfeatureElement = createFeatureElement(feature); 
     document.querySelector("#selected ul").appendChild(newfeatureElement); 
-    // feature added
+    // feature addeds
 
     //FLIP
     const start = target.getBoundingClientRect();
@@ -151,7 +148,7 @@ function createFeatureElement(feature) {
   li.dataset.feature = feature;
 
   const img = document.createElement("img");
-  img.src = `images/feature_${feature}.png`;
+  img.src = `images/phone_controller.jpg_${feature}.png`;
   img.alt = capitalize(feature);
 
   //Add the li element
