@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33)); */
+    /* background-image: repeating-linear-gradient(45deg, rgba(226, 226, 226,0.06) 0px, rgba(226, 226, 226,0.06) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33)); */
+    /* background-image: linear-gradient(0deg, rgba(3, 121, 241, 0.5) 0%, rgba(3, 121, 241, 0.5) 9%, transparent 9%, transparent 16%, rgba(11, 75, 199, 0.5) 16%, rgba(11, 75, 199, 0.5) 49%, rgba(9, 86, 209, 0.5) 49%, rgba(9, 86, 209, 0.5) 100%), linear-gradient(135deg, rgb(3, 121, 241) 0%, rgb(3, 121, 241) 31%, rgb(13, 63, 188) 31%, rgb(13, 63, 188) 37%, transparent 37%, transparent 56%, rgb(9, 86, 209) 56%, rgb(9, 86, 209) 100%), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255)); */
+    /* background: rgba(3, 121, 241, 0.5) ; */
+    /*  background-image: radial-gradient(circle at bottom right, rgb(52, 33, 141) 0%, rgb(52, 33, 141) 20%,rgb(52, 50, 168) 20%, rgb(52, 50, 168) 40%,rgb(52, 68, 195) 40%, rgb(52, 68, 195) 60%,rgb(52, 85, 221) 60%, rgb(52, 85, 221) 80%,rgb(52, 102, 248) 80%, rgb(52, 102, 248) 100%); */
+
+    /* background: #e2f6ff; */
+    background-image: linear-gradient(158deg, rgba(84, 84, 84, 0.03) 0%, rgba(84, 84, 84, 0.03) 20%, rgba(219, 219, 219, 0.03) 20%, rgba(219, 219, 219, 0.03) 40%, rgba(54, 54, 54, 0.03) 40%, rgba(54, 54, 54, 0.03) 60%, rgba(99, 99, 99, 0.03) 60%, rgba(99, 99, 99, 0.03) 80%, rgba(92, 92, 92, 0.03) 80%, rgba(92, 92, 92, 0.03) 100%), linear-gradient(45deg, rgba(221, 221, 221, 0.02) 0%, rgba(221, 221, 221, 0.02) 14.286%, rgba(8, 8, 8, 0.02) 14.286%, rgba(8, 8, 8, 0.02) 28.572%, rgba(52, 52, 52, 0.02) 28.572%, rgba(52, 52, 52, 0.02) 42.858%, rgba(234, 234, 234, 0.02) 42.858%, rgba(234, 234, 234, 0.02) 57.144%, rgba(81, 81, 81, 0.02) 57.144%, rgba(81, 81, 81, 0.02) 71.42999999999999%, rgba(239, 239, 239, 0.02) 71.43%, rgba(239, 239, 239, 0.02) 85.71600000000001%, rgba(187, 187, 187, 0.02) 85.716%, rgba(187, 187, 187, 0.02) 100.002%), linear-gradient(109deg, rgba(33, 33, 33, 0.03) 0%, rgba(33, 33, 33, 0.03) 12.5%, rgba(147, 147, 147, 0.03) 12.5%, rgba(147, 147, 147, 0.03) 25%, rgba(131, 131, 131, 0.03) 25%, rgba(131, 131, 131, 0.03) 37.5%, rgba(151, 151, 151, 0.03) 37.5%, rgba(151, 151, 151, 0.03) 50%, rgba(211, 211, 211, 0.03) 50%, rgba(211, 211, 211, 0.03) 62.5%, rgba(39, 39, 39, 0.03) 62.5%, rgba(39, 39, 39, 0.03) 75%, rgba(55, 55, 55, 0.03) 75%, rgba(55, 55, 55, 0.03) 87.5%, rgba(82, 82, 82, 0.03) 87.5%, rgba(82, 82, 82, 0.03) 100%), linear-gradient(348deg, rgba(42, 42, 42, 0.02) 0%, rgba(42, 42, 42, 0.02) 20%, rgba(8, 8, 8, 0.02) 20%, rgba(8, 8, 8, 0.02) 40%, rgba(242, 242, 242, 0.02) 40%, rgba(242, 242, 242, 0.02) 60%, rgba(42, 42, 42, 0.02) 60%, rgba(42, 42, 42, 0.02) 80%, rgba(80, 80, 80, 0.02) 80%, rgba(80, 80, 80, 0.02) 100%), linear-gradient(120deg, rgba(106, 106, 106, 0.03) 0%, rgba(106, 106, 106, 0.03) 14.286%, rgba(67, 67, 67, 0.03) 14.286%, rgba(67, 67, 67, 0.03) 28.572%, rgba(134, 134, 134, 0.03) 28.572%, rgba(134, 134, 134, 0.03) 42.858%, rgba(19, 19, 19, 0.03) 42.858%, rgba(19, 19, 19, 0.03) 57.144%, rgba(101, 101, 101, 0.03) 57.144%, rgba(101, 101, 101, 0.03) 71.42999999999999%, rgba(205, 205, 205, 0.03) 71.43%, rgba(205, 205, 205, 0.03) 85.71600000000001%, rgba(53, 53, 53, 0.03) 85.716%, rgba(53, 53, 53, 0.03) 100.002%), linear-gradient(45deg, rgba(214, 214, 214, 0.03) 0%, rgba(214, 214, 214, 0.03) 16.667%, rgba(255, 255, 255, 0.03) 16.667%, rgba(255, 255, 255, 0.03) 33.334%, rgba(250, 250, 250, 0.03) 33.334%, rgba(250, 250, 250, 0.03) 50.001000000000005%, rgba(231, 231, 231, 0.03) 50.001%, rgba(231, 231, 231, 0.03) 66.668%, rgba(241, 241, 241, 0.03) 66.668%, rgba(241, 241, 241, 0.03) 83.33500000000001%, rgba(31, 31, 31, 0.03) 83.335%, rgba(31, 31, 31, 0.03) 100.002%), linear-gradient(59deg, rgba(224, 224, 224, 0.03) 0%, rgba(224, 224, 224, 0.03) 12.5%, rgba(97, 97, 97, 0.03) 12.5%, rgba(97, 97, 97, 0.03) 25%, rgba(143, 143, 143, 0.03) 25%, rgba(143, 143, 143, 0.03) 37.5%, rgba(110, 110, 110, 0.03) 37.5%, rgba(110, 110, 110, 0.03) 50%, rgba(34, 34, 34, 0.03) 50%, rgba(34, 34, 34, 0.03) 62.5%, rgba(155, 155, 155, 0.03) 62.5%, rgba(155, 155, 155, 0.03) 75%, rgba(249, 249, 249, 0.03) 75%, rgba(249, 249, 249, 0.03) 87.5%, rgba(179, 179, 179, 0.03) 87.5%, rgba(179, 179, 179, 0.03) 100%), linear-gradient(241deg, rgba(58, 58, 58, 0.02) 0%, rgba(58, 58, 58, 0.02) 25%, rgba(124, 124, 124, 0.02) 25%, rgba(124, 124, 124, 0.02) 50%, rgba(254, 254, 254, 0.02) 50%, rgba(254, 254, 254, 0.02) 75%, rgba(52, 52, 52, 0.02) 75%, rgba(52, 52, 52, 0.02) 100%), linear-gradient(90deg, #ffffff, #ffffff);
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+
+    perspective: 2000px;
+}
+
+/* fonts */
+
+h1,
+.watermark {
+    font-family: 'Black Ops One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+/* header */
+
+header {
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 200px;
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+    background-image: linear-gradient(158deg, rgba(84, 84, 84, 0.03) 0%, rgba(84, 84, 84, 0.03) 20%, rgba(219, 219, 219, 0.03) 20%, rgba(219, 219, 219, 0.03) 40%, rgba(54, 54, 54, 0.03) 40%, rgba(54, 54, 54, 0.03) 60%, rgba(99, 99, 99, 0.03) 60%, rgba(99, 99, 99, 0.03) 80%, rgba(92, 92, 92, 0.03) 80%, rgba(92, 92, 92, 0.03) 100%), linear-gradient(45deg, rgba(221, 221, 221, 0.02) 0%, rgba(221, 221, 221, 0.02) 14.286%, rgba(8, 8, 8, 0.02) 14.286%, rgba(8, 8, 8, 0.02) 28.572%, rgba(52, 52, 52, 0.02) 28.572%, rgba(52, 52, 52, 0.02) 42.858%, rgba(234, 234, 234, 0.02) 42.858%, rgba(234, 234, 234, 0.02) 57.144%, rgba(81, 81, 81, 0.02) 57.144%, rgba(81, 81, 81, 0.02) 71.42999999999999%, rgba(239, 239, 239, 0.02) 71.43%, rgba(239, 239, 239, 0.02) 85.71600000000001%, rgba(187, 187, 187, 0.02) 85.716%, rgba(187, 187, 187, 0.02) 100.002%), linear-gradient(109deg, rgba(33, 33, 33, 0.03) 0%, rgba(33, 33, 33, 0.03) 12.5%, rgba(147, 147, 147, 0.03) 12.5%, rgba(147, 147, 147, 0.03) 25%, rgba(131, 131, 131, 0.03) 25%, rgba(131, 131, 131, 0.03) 37.5%, rgba(151, 151, 151, 0.03) 37.5%, rgba(151, 151, 151, 0.03) 50%, rgba(211, 211, 211, 0.03) 50%, rgba(211, 211, 211, 0.03) 62.5%, rgba(39, 39, 39, 0.03) 62.5%, rgba(39, 39, 39, 0.03) 75%, rgba(55, 55, 55, 0.03) 75%, rgba(55, 55, 55, 0.03) 87.5%, rgba(82, 82, 82, 0.03) 87.5%, rgba(82, 82, 82, 0.03) 100%), linear-gradient(348deg, rgba(42, 42, 42, 0.02) 0%, rgba(42, 42, 42, 0.02) 20%, rgba(8, 8, 8, 0.02) 20%, rgba(8, 8, 8, 0.02) 40%, rgba(242, 242, 242, 0.02) 40%, rgba(242, 242, 242, 0.02) 60%, rgba(42, 42, 42, 0.02) 60%, rgba(42, 42, 42, 0.02) 80%, rgba(80, 80, 80, 0.02) 80%, rgba(80, 80, 80, 0.02) 100%), linear-gradient(120deg, rgba(106, 106, 106, 0.03) 0%, rgba(106, 106, 106, 0.03) 14.286%, rgba(67, 67, 67, 0.03) 14.286%, rgba(67, 67, 67, 0.03) 28.572%, rgba(134, 134, 134, 0.03) 28.572%, rgba(134, 134, 134, 0.03) 42.858%, rgba(19, 19, 19, 0.03) 42.858%, rgba(19, 19, 19, 0.03) 57.144%, rgba(101, 101, 101, 0.03) 57.144%, rgba(101, 101, 101, 0.03) 71.42999999999999%, rgba(205, 205, 205, 0.03) 71.43%, rgba(205, 205, 205, 0.03) 85.71600000000001%, rgba(53, 53, 53, 0.03) 85.716%, rgba(53, 53, 53, 0.03) 100.002%), linear-gradient(45deg, rgba(214, 214, 214, 0.03) 0%, rgba(214, 214, 214, 0.03) 16.667%, rgba(255, 255, 255, 0.03) 16.667%, rgba(255, 255, 255, 0.03) 33.334%, rgba(250, 250, 250, 0.03) 33.334%, rgba(250, 250, 250, 0.03) 50.001000000000005%, rgba(231, 231, 231, 0.03) 50.001%, rgba(231, 231, 231, 0.03) 66.668%, rgba(241, 241, 241, 0.03) 66.668%, rgba(241, 241, 241, 0.03) 83.33500000000001%, rgba(31, 31, 31, 0.03) 83.335%, rgba(31, 31, 31, 0.03) 100.002%), linear-gradient(59deg, rgba(224, 224, 224, 0.03) 0%, rgba(224, 224, 224, 0.03) 12.5%, rgba(97, 97, 97, 0.03) 12.5%, rgba(97, 97, 97, 0.03) 25%, rgba(143, 143, 143, 0.03) 25%, rgba(143, 143, 143, 0.03) 37.5%, rgba(110, 110, 110, 0.03) 37.5%, rgba(110, 110, 110, 0.03) 50%, rgba(34, 34, 34, 0.03) 50%, rgba(34, 34, 34, 0.03) 62.5%, rgba(155, 155, 155, 0.03) 62.5%, rgba(155, 155, 155, 0.03) 75%, rgba(249, 249, 249, 0.03) 75%, rgba(249, 249, 249, 0.03) 87.5%, rgba(179, 179, 179, 0.03) 87.5%, rgba(179, 179, 179, 0.03) 100%), linear-gradient(241deg, rgba(58, 58, 58, 0.02) 0%, rgba(58, 58, 58, 0.02) 25%, rgba(124, 124, 124, 0.02) 25%, rgba(124, 124, 124, 0.02) 50%, rgba(254, 254, 254, 0.02) 50%, rgba(254, 254, 254, 0.02) 75%, rgba(52, 52, 52, 0.02) 75%, rgba(52, 52, 52, 0.02) 100%), linear-gradient(90deg, #ffffff, #ffffff);
+    flex-direction: row;
+    color: #29abe2;
+}
+
+nav {
+    display: flex;
+    gap: 55px;
+}
+
+header a {
+    font-size: 1.1em;
+    color: inherit;
+
+}
+
+.sticky {
+    background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(43, 43, 43), rgb(43, 43, 43));
+
+    color: white;
+    padding: 19px 200px;
+}
+
+.logo {
+    width: 50px;
+    transition: 1s;
+
+}
+
+.color {
+    fill: white;
+    transition: all 1s;
+    width: 200px;
+}
+
+.click {
+    cursor: pointer;
+}
+
+[data-value="previous"] {
+    position: absolute;
+    left: -50px;
+}
+
+/* hero section */
+
+.hero {
+    color: azure;
+    /* background-image: radial-gradient(circle at bottom right, rgb(52, 33, 141) 0%, rgb(52, 33, 141) 20%, rgb(52, 50, 168) 20%, rgb(52, 50, 168) 40%, rgb(52, 68, 195) 40%, rgb(52, 68, 195) 60%, rgb(52, 85, 221) 60%, rgb(52, 85, 221) 80%, rgb(52, 102, 248) 80%, rgb(52, 102, 248) 100%);
+     */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 130px;
+    padding: 200px;
+    background-image: radial-gradient(circle at center center, rgba(33, 33, 33, 0), rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px, transparent 6px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+    background-image: radial-gradient(circle at center center, rgba(33, 33, 33, 0), rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px, transparent 6px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+    background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(43, 43, 43), rgb(43, 43, 43));
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+
+.hero .display {
+    grid-column: 2;
+    grid-row: 1/3;
+}
+
+.hero-img {
+    width: 100%;
+
+    transform: translate(-20%, -20%) scale(1.2) rotate(20deg);
+}
+
+.arrow img {
+    width: 50px;
+}
+
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    background: white;
+    border-radius: 20px;
+    height: 100%;
+    padding: 30px;
+    color: rgba(39, 90, 138);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.rotate-y {
+    animation: rotation-y 1s;
+}
+
+@keyframes rotation-y {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.rotate-x {
+    animation: rotation-x 1s;
+}
+
+@keyframes rotation-x {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(180deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #29abe2;
+}
+
+.hero-text h2 {
+    font-size: 1.8em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+
+button {
+    border: 2px solid;
+    font: inherit;
+    padding: .8em 2em;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.hero-text button {
+    color: white;
+    background: #29abe2;
+}
+
+.card button {
+    color: rgba(39, 90, 138);
+    background: white;
+    width: 100%;
+}
+
+.toggle {
+    background: #29abe2;
+    border-radius: 20px;
+}
+
+.card h3 {
+    font-size: 1.8em;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    gap: 2em;
+    width: 100%;
+
+}
+
+.item {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.item img {
+    height: auto;
+    width: 200px;
+}
+
+.card>* {
+    transition: 1s ease;
+}
+
+
+
+
+/* sub sections */
+
+
+
+.sub {
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 100px;
+    grid-auto-flow: column;
+}
+
+.stock {
+    background: url(../images/home-page-images/sprinter.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 500px;
+}
+
+.text {
+    color: rgba(39, 90, 138);
+}
+
+.text h2 {
+    font-size: 2em;
+    margin-bottom: .2em;
+}
+
+.text p {
+    font-size: 1.2em;
+}
+
+.sub img {
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.sub .watermark {
+    position: absolute;
+    color: rgba(39, 90, 138, 0.619);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    z-index: 1;
+    user-select: none;
+}
+
+
+
+/* #first {
+    background: linear-gradient(90deg, rgba(52,85,221,1) 0%, rgba(52,50,167,1) 100%);
+} */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    transition: 1s;
+    border-radius: 20px;
+    display: none;
+}
+
+/* responsiveness */
+
+
+
+@media only screen and (max-width: 1400px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 120px 100px;
+    }
+
+    .item {
+
+        width: calc(14vw - 20px);
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .hero {
+        padding: 180px 100px;
+
+        gap: 50px;
+    }
+
+    .item {
+
+        width: calc(18vw - 20px);
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 130px;
+        padding: 20px;
+        height: auto;
+
+    }
+
+    .hero>* {
+        margin: 20px 5px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+    }
+
+
+    .card img {
+        width: 100%;
+    }
+
+
+    .hero-text {
+        grid-row: 3;
+    }
+
+
+    .hero .display {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero .wrapper {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+
+    .sub {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .stock {
+        height: 200px;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .item {
+
+        width: calc(50vw - 20px);
+    }
+
+    .hero-img {
+        transform: rotate(10deg);
+    }
+
+    .watermark {
+        font-size: 20px;
+    }
+
+}
