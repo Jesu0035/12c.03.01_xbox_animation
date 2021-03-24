@@ -10,9 +10,9 @@ body {
   grid-template-areas: "product" "option" "option"; */
 }
 
-/* :root {
+:root {
   font-family: "Quicksand", sans-serif;
-} */
+}
 
 #configurator {
   display: grid;
@@ -28,6 +28,7 @@ body {
   border-radius: 5px;
   position: relative;
   transition: opacity ease-in 0.5s;
+  background-color: rgb(167, 207, 207);
 }
 
 #product-preview img {
@@ -35,8 +36,8 @@ body {
   width: 33%;
   height: auto;
   display: flex;
-  top: 2vw;
-  left: 19vw;
+  top: 0.5vw;
+  left: 21vw;
 }
 
 #product-preview .hide {
