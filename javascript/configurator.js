@@ -11,73 +11,74 @@ const features = {
 
 window.addEventListener("DOMContentLoaded", start);
 
-let elementToPaint 
+let elementToPaint
 
 async function start(){
  console.log("start");
   // register toggle-clicks
-let response = await fetch('MasterNoelB-01.svg')
+let response = await fetch('../svg/MasterNoelB-01.svg')
+console.log(response)
     let mySvgData = await response.text( );
     document.querySelector('section').innerHTML = mySvgData;
 
     document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
-    
-    startManiputaltionSvg();   
+
+    startManiputaltionSvg();
 }
     function startManiputaltionSvg(){
         document.querySelectorAll(".g_to_interact_with").forEach(eachG => {
-            console.log(eachG); 
-    
-            eachG.addEventListener("click", theClick); 
-            eachG.addEventListener("mouseover", theMouseover); 
-            eachG.addEventListener("mouseout", theMouseout); 
-            
+            console.log(eachG);
+
+            eachG.addEventListener("click", theClick);
+            eachG.addEventListener("mouseover", theMouseover);
+            eachG.addEventListener("mouseout", theMouseout);
+
         document.querySelectorAll(".color_btn").forEach(each_btn => {
-        each_btn.addEventListener("click", colorClick);  
-            
-        
-        }); 
-        }) 
-        
+        each_btn.addEventListener("click", colorClick);
+
+
+        });
+        })
+
     }
- //this function make first click grey  
+ //this function make first click grey
     function theClick(){
         console.log(this);
-        elementToPaint = this; 
-        this.style.fill = "white"; 
+        elementToPaint = this;
+        this.style.fill = "white";
     }
-     /* this function make the lines blue so we can select the place  */ 
+     /* this function make the lines blue so we can select the place  */
     function theMouseover(){
-        console.log(this); 
+        console.log(this);
         this.style.stroke = "blue";
     }
-    /* this function makes desapear the blue stroke when we move the mouse */ 
+    /* this function makes desapear the blue stroke when we move the mouse */
     function theMouseout(){
-        console.log(this); 
+        console.log(this);
         this.style.stroke = "none";
     }
-    
+
     function colorClick(){
-        console.log("KLIK", this.getAttribute("fill")); 
+        console.log("KLIK", this.getAttribute("fill"));
     if(elementToPaint != undefined){
-        elementToPaint.style.fill = this.getAttribute("fill"); 
+        elementToPaint.style.fill = this.getAttribute("fill");
     }
-} 
+}
 
 
 function toggleOption(event) {
   const target = event.currentTarget;
   const feature = target.dataset.feature;
-  
+
 
   // TODO: Toggle feature in "model"
-  features[feature] = !features[feature]; 
+  features[feature] = !features[feature];
 
 
   // If feature is (now) turned on:
-  
 
- 
+
+
   // - create FLIP-animation to animate featureElement from img in target, to
   //   its intended position. Do it with normal animation or transition class!
 
@@ -85,17 +86,17 @@ function toggleOption(event) {
   // - find the existing featureElement in #selected ul
   // - create FLIP-animation to animate featureElement to img in target
   // - when animation is complete, remove featureElement from the DOM
-  
+
   if (features[feature] === true) {
     //Select target and add chosen class
-    target.classList.add("chosen"); 
+    target.classList.add("chosen");
 
-    //Remove the hide class 
-    document.querySelector(`[data-feature="${feature}"]`).classList.remove("hide"); 
+    //Remove the hide class
+    document.querySelector(`[data-feature="${feature}"]`).classList.remove("hide");
 
      //Create new featureElement and add it to the list
-    const newfeatureElement = createFeatureElement(feature); 
-    document.querySelector("#selected ul").appendChild(newfeatureElement); 
+    const newfeatureElement = createFeatureElement(feature);
+    document.querySelector("#selected ul").appendChild(newfeatureElement);
     // feature addeds
 
     //FLIP
@@ -109,11 +110,11 @@ function toggleOption(event) {
     newfeatureElement.style.setProperty("--diffy", diffy);
 
     //Animation feature in
-    newfeatureElement.classList = "animate-feature-in";         
+    newfeatureElement.classList = "animate-feature-in";
       }
-    
+
    else {
-    target.classList.remove("chosen"); 
+    target.classList.remove("chosen");
     const theFeatureElement = document.querySelector(`#selected [data-feature="${feature}"]`);
 
     const end = theFeatureElement.getBoundingClientRect();
@@ -125,19 +126,19 @@ function toggleOption(event) {
     theFeatureElement.style.setProperty("--diffx", diffx);
     theFeatureElement.style.setProperty("--diffy", diffy);
 
-    theFeatureElement.offsetHeight; 
+    theFeatureElement.offsetHeight;
 
     //Animation feature out
-    theFeatureElement.classList = "animate-feature-out"; 
+    theFeatureElement.classList = "animate-feature-out";
 
 
     //when animation is complete, remove featureElement from the DOM
     theFeatureElement.addEventListener("animationend", function() {
-    theFeatureElement.remove(); 
+    theFeatureElement.remove();
     //Chose the feature element and hide it
     document.querySelector(`[data-feature=${feature}`).classList.add("hide");
     console.log(`Feature ${feature} is turned off!`);
-}); 
+});
    }
   }
 
