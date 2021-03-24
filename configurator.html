@@ -1,99 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controller Configurator</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/configurator.css" />
-  </head>
-  <body>
-<header class="cabeza">
 
-</header>
-    <h1>Xbox configurator</h1>
-    <h4><a href="home.html">Back</a></h4>
-    <p>
-     <br> Welcome to the Xbox-configurator!<br/>
-    </p>
-    <div id="configurator">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xbox-Configurator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/configurator.css" />
+</head>
 
-      <div id="product-preview">
-        <section class="SvgContainer"></section>
-            <div id="color-box">
-              <p>
-                       <br> Please clik the xbox and then choose colour!<br>
-                     </p>
+<body>
+  <header class="header">
+    <svg id="logo_layer" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" class="logo"
+      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 159.64 90.72">
+      <defs>
+        <linearGradient id="linear-gradient" x1="807.94" y1="563.67" x2="967.58" y2="563.67"
+          gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#29abe2" />
+          <stop offset="1" stop-color="#0071bc" />
+        </linearGradient>
+      </defs>
+      <path id="svg-logo"
+        d="M877.35,577.4l8.1-12.78-1.5-1.43c-.8,1.4-1.33,3.07-2.44,4.15-10.27,10-20.41,20.15-31.08,29.7A62.36,62.36,0,0,1,835,607c-10.2,4.66-18.66,1.12-23.52-9-3.5-7.31-3.91-15.14-3.21-23a77.18,77.18,0,0,1,19.41-45.13c9-10.24,19.76-14,33.19-9a126.63,126.63,0,0,0,21.64,5.9c5,.9,10.23.17,15.76.17L888,538.79l.51.54c4.47-3.3,8.87-6.7,13.43-9.88,3.56-2.47,7.22-4.81,11-6.93,11-6.21,21.22-5.8,30.42,2.89,18.44,17.42,26.84,38.94,23.51,64.45a28.22,28.22,0,0,1-2.81,8.48c-4.93,10-13.49,13.59-23.14,8.18-8.34-4.67-15.85-10.95-23.26-17.07-6.8-5.61-13.71-10.88-22.64-11.93C889.46,576.86,883.77,577.4,877.35,577.4Zm-28.9-24.91c6.84-2.87,6.17-8.58,5.8-14-.27-4.05-3.63-2.53-5.76-2.57s-5.42-1.32-5.69,2.72C842.43,544.12,842.05,549.72,848.45,552.49Zm-1.59,1.68c-1.21-1.27-2.35-3.53-4-3.92a34.42,34.42,0,0,0-11.42-1c-.76.08-1.23,4.46-1.59,6.9-.42,2.85.8,4,3.88,4.18C839.24,560.67,844,560.06,846.86,554.17Zm2.92,2c.94.55,2.43,2,4.14,2.33,3.91.79,8,1.54,11.86,1.09.78-.09,1.12-5.53,1.25-8.52,0-.72-1.58-2.11-2.52-2.19C859,548.39,853.34,548.09,849.78,556.17Zm-1.49.07-3.43,3.23c-3.74,3.57-2.34,8.18-1.46,12.06.25,1.1,5.41,1.28,8.34,1.46a3.42,3.42,0,0,0,2.42-2.28C854.71,565.06,855.13,559.31,848.29,556.24ZM926.65,550a7.09,7.09,0,0,0,1.18-14.12A7.09,7.09,0,1,0,926.65,550Zm.69,23.13a7.16,7.16,0,0,0,6.83-7.17,7.09,7.09,0,0,0-7-7,7.08,7.08,0,1,0,.18,14.15Zm18.49-18.6a7.17,7.17,0,0,0-6.93-7.06,7,7,0,0,0-7.21,7.21,6.87,6.87,0,0,0,7.08,6.79A7.19,7.19,0,0,0,945.83,554.52Zm-30.28-7.08a7,7,0,0,0-7,6.94,6.78,6.78,0,0,0,6.75,7.07,7,7,0,1,0,.22-14Z"
+        transform="translate(-807.94 -518.31)" fill="#29abe2" />
+    </svg>
 
+  </header>
 
+  <main id="configurator">
 
-    <svg width='700' height="100"  viewBox="0 0 600 300" >
+    <section id="product-preview">
 
+      <div class="img-container">
 
-                     <rect class="color_btn" x="-500" y="10" rx="200" ry="200" width="100" height="100"  fill='red'/>
-                     <rect class="color_btn" x="-390" y="10" rx="200" ry="200" width="100" height="100" fill='purple'/>
-                     <rect class="color_btn" x="-280" y="10" rx="200" ry="200" width="100" height="100" fill='green'/>
-                     <rect class="color_btn" x="-170" y="10" rx="200" ry="200" width="100" height="100" fill='lightgreen'/>
-                    <rect class="color_btn"x="-60" y="10" rx="200" ry="200" width="100" height="100" fill='yellowgreen'/>
-                     <rect class="color_btn" x="50" y="10" rx="200" ry="200" width="100" height="100" fill='pink'/>
-                     <rect class="color_btn"x="160" y="10" rx="200" ry="200" width="100" height="100" fill='brown'/>
-                     <rect class="color_btn" x="270" y="10" rx="200" ry="200" width="100" height="100"fill='orange'/>
+        <div class="main-product"></div>
 
-                    </svg>
-                     <button class="color_btn">change color</button>
-                 </div>
+        <img id="phone-holder" src="images/configurator-images/phone-holder.png" alt="" class="hide" data-feature="phone-holder" />
 
-        <!-- DONE: add all feature image layers -->
-       <!--   <img src="images/telephone_01.png" alt="" class="basic" data-feature="basic"/>  -->
+        <img id="right-thumb" src="images/configurator-images/right-thumb.png" alt="" class="hide" data-feature="right-thumb" />
 
-        <img src="images/telephone2.png" alt="" class="hide" data-feature="Holder_phone"/>
-       <div id="btn_black">  <img id="btn_black2" src="images/botton.png" alt="" class="hide" data-feature="black_botton"/></div>
-       <div id="btn_red"> <img id="btn_red" src="images/botton_red.png" alt="" class="hide" data-feature="red_botton"/></div>
+        <img id="left-thumb" src="images/configurator-images/left-thumb.png" alt="" class="hide" data-feature="left-thumb" />
 
-       <div id="guld"> <img id="guld2" src="images/gold_left.png" alt="" class="hide" data-feature="gold"/></div>
+        <img id="arrow-keys" src="images/configurator-images/arrow-keys.png" alt="" class="hide" data-feature="arrow-keys" />
 
-        <!-- <img src="images/cap_shield_front.png" alt="" class="hide" data-feature="shield_front"/>
-        <img src="images/cap_solarfan.png" alt="" class="hide" data-feature="solarfan"/> -->
+        <img id="dpad" src="images/configurator-images/dpad.png" alt="" class="hide" data-feature="dpad" />
+
       </div>
 
-      <div id="options">
-        Available features
-        <figure class="option" data-feature="Holder_phone">
-          <img src="images/telephone2.png" alt="Holder_phone"/>
-          <figcaption>Holder phone</figcaption>
-          <!-- first feature its done -->
-        </figure>
-        <figure class="option" data-feature="black_botton">
-          <img src="images/botton.png" alt="black_botton" />
-          <figcaption>Botton black</figcaption>
-        </figure>
-        <figure class="option" data-feature="red_botton">
-          <img src="images/botton_red.png" alt="red_botton"/>
-          <figcaption>Botton red</figcaption>
-        </figure>
-        <figure class="option" data-feature="gold">
-          <img src="images/gold_left.png" alt="gold" />
-          <figcaption>Gold</figcaption>
-        </figure>
-<!--         <figure class="option" data-feature="solarfan">
-          <img src="images/feature_solarfan.png" alt="Solar powered fan" />
-          <figcaption>Solar Powered Fan</figcaption>
-        </figure> -->
+    </section>
+
+    <section id="options">
+
+      <div class="categories">
+
+        <div class="category category-active" data-category="colors">Colors</div>
+        <div class="category" data-category="thumbsticks">Thumbs</div>
+        <div class="category" data-category="buttons">Buttons</div>
+        <div class="category" data-category="arrowkeys">Dpad</div>
+        <div class="category" data-category="extras">Extras</div>
+
       </div>
 
-       <div id="selected">
-        Selected features
-        <ul>
+      <div class="tabs">
+        <div class="tab" data-category="extras">
 
-      <!-- featureElements are added here! -->
-         </ul>
+          <figure class="option" data-feature="phone-holder">
+            <figcaption>Holder phone</figcaption>
+            <img src="images/configurator-images/phone-holder.png" data-feature="phone-holder" />
+          </figure>
+
+        </div>
+
+        <div class="tab" data-category="thumbsticks">
+          <figure class="option" data-feature="left-thumb">
+            <figcaption>Botton black</figcaption>
+            <img src="images/configurator-images/left-thumb.png" alt="left-thumb" />
+          </figure>
+
+          <figure class="option" data-feature="right-thumb">
+            <figcaption>Button red</figcaption>
+            <img src="images/configurator-images/right-thumb.png" alt="right-thumb" />
+          </figure>
+        </div>
+
+        <div class="tab" data-category="arrowkeys">
+          <figure class="option" data-feature="arrow-keys">
+            <figcaption>Black Arrow Keys</figcaption>
+            <img src="images/configurator-images/arrow-keys.png" alt="arrow-keys" />
+          </figure>
+
+          <figure class="option" data-feature="dpad">
+            <figcaption>Dpad</figcaption>
+            <img src="images/configurator-images/dpad.png" alt="arrow-keys" />
+          </figure>
+
+        </div>
+
+        <div class="tab active" data-category="colors">
+          <figure class="option-color" data-color="darkslategrey">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+          <figure class="option-color" data-color="palegoldenrod">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+          <figure class="option-color" data-color="dodgerblue">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+          <figure class="option-color" data-color="orange">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+          <figure class="option-color" data-color="aqua">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+          <figure class="option-color" data-color="gold">
+            <figcaption></figcaption>
+            <div class="color"></div>
+          </figure>
+        </div>
       </div>
-    </div>
 
-    <script src="javascript/configurator.js"></script>
-  </body>
+
+
+    </section>
+
+    <section id="selected">
+      <ul>
+        <li class="selected-color"></li>
+
+      </ul>
+
+      <button>Purchase</button>
+
+    </section>
+  </main>
+
+  <script src="javascript/configurator.js"></script>
+</body>
+
 </html>
-
-

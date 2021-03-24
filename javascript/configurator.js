@@ -3,66 +3,74 @@
 // The model of all features
 const features = {
   Holder_phone: false,
-  black_botton: false,
-  red_botton: false,
-  gold: false,
+  led: false,
+  propeller: false,
+  shield_black: false,
   solarfan: false
 };
 
+let onlyOne = true
+
+
 window.addEventListener("DOMContentLoaded", start);
 
-let elementToPaint
+let elementToPaint = ''
 
-async function start(){
- console.log("start");
-  // register toggle-clicks
-let response = await fetch('../svg/MasterNoelB-01.svg')
-console.log(response)
-    let mySvgData = await response.text( );
-    document.querySelector('section').innerHTML = mySvgData;
+async function start() {
 
-    document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
+  let response = await fetch('../svg/MasterNoelB-01.svg')
+  let mySvgData = await response.text();
+  document.querySelector('.main-product').innerHTML = mySvgData;
 
-    startManiputaltionSvg();
+  document.querySelectorAll(".option").forEach(option => option.addEventListener("click", toggleOption));
+
+  startManiputaltionSvg();
 }
-    function startManiputaltionSvg(){
-        document.querySelectorAll(".g_to_interact_with").forEach(eachG => {
-            console.log(eachG);
 
-            eachG.addEventListener("click", theClick);
-            eachG.addEventListener("mouseover", theMouseover);
-            eachG.addEventListener("mouseout", theMouseout);
+function startManiputaltionSvg() {
+  document.querySelectorAll(".g_to_interact_with").forEach(eachG => {
+    console.log(eachG)
+    eachG.style.fill = 'purple'
+    eachG.addEventListener("click", theClick);
+    eachG.addEventListener("mouseover", () => {
+      console.log(2)
+    });
+    eachG.addEventListener("mouseout", theMouseout);
 
-        document.querySelectorAll(".color_btn").forEach(each_btn => {
-        each_btn.addEventListener("click", colorClick);
+    document.querySelectorAll(".option-color").forEach(each_btn => {
+      each_btn.addEventListener("click", colorClick);
 
 
-        });
-        })
+    });
+  })
 
-    }
- //this function make first click grey
-    function theClick(){
-        console.log(this);
-        elementToPaint = this;
-        this.style.fill = "white";
-    }
-     /* this function make the lines blue so we can select the place  */
-    function theMouseover(){
-        console.log(this);
-        this.style.stroke = "blue";
-    }
-    /* this function makes desapear the blue stroke when we move the mouse */
-    function theMouseout(){
-        console.log(this);
-        this.style.stroke = "none";
-    }
+}
+//this function make first click grey
+function theClick(e) {
+  console.log('click')
+  console.log(e.target)
+  console.log(this)
+  console.log(elementToPaint)
+  this.style.fill = elementToPaint
+}
+/* this function make the lines blue so we can select the place  */
+function theMouseover() {
+  console.log(this)
+  this.style.stroke = "blue"
+}
+/* this function makes desapear the blue stroke when we move the mouse */
+function theMouseout() {
+  console.log(this)
+  this.style.stroke = "none"
+}
 
-    function colorClick(){
-        console.log("KLIK", this.getAttribute("fill"));
-    if(elementToPaint != undefined){
-        elementToPaint.style.fill = this.getAttribute("fill");
-    }
+function colorClick() {
+  elementToPaint = this.lastElementChild.style.backgroundColor
+  if (elementToPaint != undefined) {
+    document.querySelector('.selected-color').style.background = this.lastElementChild.style.backgroundColor;
+    elementToPaint = this.lastElementChild.style.backgroundColor;
+  }
+
 }
 
 
@@ -70,37 +78,72 @@ function toggleOption(event) {
   const target = event.currentTarget;
   const feature = target.dataset.feature;
 
-
   // TODO: Toggle feature in "model"
   features[feature] = !features[feature];
 
-
-  // If feature is (now) turned on:
-
-
-
-  // - create FLIP-animation to animate featureElement from img in target, to
-  //   its intended position. Do it with normal animation or transition class!
-
-  // Else - if the feature (became) turned off:
-  // - find the existing featureElement in #selected ul
-  // - create FLIP-animation to animate featureElement to img in target
-  // - when animation is complete, remove featureElement from the DOM
-
   if (features[feature] === true) {
+
+    const category = target.parentElement.dataset.category
+    const childrenElements = document.querySelector(`ul [data-feature="${target.dataset.feature}"`)
+    const chosen = target.parentElement.querySelector('.chosen')
+
+
+    if (target.parentElement.dataset.category == 'arrowkeys') {
+
+      if (chosen) {
+        alert('You can only pick one ' + target.parentElement.dataset.category + '. Deselect current element.')
+      } else {
+        addFeature(target)
+      }
+
+    } else if (target.parentElement.dataset.category == 'thumbsticks') {
+
+      if (chosen) {
+        alert('You can only pick one ' + target.parentElement.dataset.category + '. Deselect current element.')
+      } else {
+        addFeature(target)
+        copyImage(target)
+      }
+
+    } else {
+      addFeature(target)
+    }
+
+
+
+  } else {
+    removeFeature(target)
+    if (document.querySelector('#selected ul')) {
+
+    }
+
+  }
+
+  function copyImage(target) {
+
+    const previewImage = document.querySelector(`#product-preview [data-feature=${target.dataset.feature}`)
+    const copy = previewImage.cloneNode(true)
+    copy.classList.add('copy')
+    copy.id = 'copy'
+
+    console.log(copy)
+    document.querySelector('.img-container').appendChild(copy)
+    copy.classList.remove('hide')
+  }
+
+  function addFeature(target) {
     //Select target and add chosen class
-    target.classList.add("chosen");
+    target.classList.add("chosen")
 
     //Remove the hide class
-    document.querySelector(`[data-feature="${feature}"]`).classList.remove("hide");
-
-     //Create new featureElement and add it to the list
-    const newfeatureElement = createFeatureElement(feature);
-    document.querySelector("#selected ul").appendChild(newfeatureElement);
-    // feature addeds
+    document.querySelector(`[data-feature="${feature}"`).classList.remove("hide")
+    //Create new featureElement and add it to the list
+    const newfeatureElement = createFeatureElement(feature)
+    document.querySelector("#selected ul").appendChild(newfeatureElement)
+    // feature added
 
     //FLIP
-    const start = target.getBoundingClientRect();
+    const start = target.lastElementChild.getBoundingClientRect();
     const end = newfeatureElement.getBoundingClientRect();
 
     const diffx = start.x - end.x + "px";
@@ -111,14 +154,18 @@ function toggleOption(event) {
 
     //Animation feature in
     newfeatureElement.classList = "animate-feature-in";
-      }
+  }
 
-   else {
-    target.classList.remove("chosen");
+  function removeFeature(item) {
+    item.classList.remove("chosen");
+    console.log(item)
+
+    console.log(document.querySelector(`[data-feature="${feature}"`))
+
     const theFeatureElement = document.querySelector(`#selected [data-feature="${feature}"]`);
 
     const end = theFeatureElement.getBoundingClientRect();
-    const start = target.getBoundingClientRect();
+    const start = item.lastElementChild.getBoundingClientRect();
 
     const diffx = start.x - end.x + "px";
     const diffy = start.y - end.y + "px";
@@ -133,14 +180,31 @@ function toggleOption(event) {
 
 
     //when animation is complete, remove featureElement from the DOM
-    theFeatureElement.addEventListener("animationend", function() {
-    theFeatureElement.remove();
-    //Chose the feature element and hide it
-    document.querySelector(`[data-feature=${feature}`).classList.add("hide");
-    console.log(`Feature ${feature} is turned off!`);
-});
-   }
+    theFeatureElement.addEventListener("animationend", function () {
+      theFeatureElement.remove();
+      //Choose the feature element and hide it
+      document.querySelector(`[data-feature=${feature}`).classList.add("hide");
+
+      const copy = document.querySelector('.copy')
+
+      copy.classList.add('hide')
+
+      console.log(copy)
+
+      copy.addEventListener('transitionend', () => {
+        copy.remove()
+      })
+
+
+
+    });
   }
+
+
+
+
+}
+
 
 // Create featureElement to be appended to #selected ul - could have used a <template> instead
 function createFeatureElement(feature) {
@@ -149,7 +213,7 @@ function createFeatureElement(feature) {
   li.dataset.feature = feature;
 
   const img = document.createElement("img");
-  img.src = `images/phone_controller.jpg_${feature}.png`;
+  img.src = `images/configurator-images/${feature}.png`;
   img.alt = capitalize(feature);
 
   //Add the li element
@@ -165,6 +229,37 @@ function capitalize(text) {
 
 
 
+document.querySelectorAll('.categories [data-category]').forEach(tab => {
+  tab.addEventListener('click', (e) => {
 
 
 
+    document.querySelectorAll('.categories [data-category]').forEach(item => {
+      item.classList.remove('category-active')
+    })
+
+
+
+
+    const category = e.target.dataset.category
+    e.target.classList.add('category-active')
+
+    const currentTabs = document.querySelectorAll('.tab')
+    const currentTab = document.querySelector(`.tabs [data-category="${category}"]`)
+
+    currentTabs.forEach(item => {
+
+      item.classList.remove('active')
+    })
+
+    currentTab.classList.add('active')
+  })
+})
+
+document.querySelectorAll('.option-color').forEach(color => {
+
+
+  color.firstElementChild.textContent = capitalize(color.dataset.color)
+  color.lastElementChild.style.background = color.dataset.color
+  color.addEventListener('click', (e) => {})
+})
