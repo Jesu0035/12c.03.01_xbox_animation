@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1410 993">
   <g class='g_to_interact_with' id="Layer_1_B_letter_A_letter_X_letter_Y_letter_xx_bth_Layer_7_Layer_6_Image" data-name="Layer 1 + B_letter + A_letter + X_letter + Y_letter + xx_bth + Layer 7 + Layer 6 Image">
-     <image id="Layer_1_B_letter_A_letter_X_letter_Y_letter_xx_bth_Layer_7_Layer_6_Image-2" data-name="Layer 1 + B_letter + A_letter + X_letter + Y_letter + xx_bth + Layer 7 + Layer 6 Image" width="1410" height="993" xlink:href="MasterNoelB1.png"/>
+     <image id="Layer_1_B_letter_A_letter_X_letter_Y_letter_xx_bth_Layer_7_Layer_6_Image-2" data-name="Layer 1 + B_letter + A_letter + X_letter + Y_letter + xx_bth + Layer 7 + Layer 6 Image" width="1410" height="993" xlink:href="svg/MasterNoelB1.png"/>
   </g>
   <g class='g_to_interact_with'  id="btn_right" style="isolation: isolate">
     <path d="M882,402c21.36-.3,33.09,3.88,47,9,5.12,1.88,9.25-.46,13,2,11.16,7.31,29.36,29.93,35,43l3,18c12.79,49.87-29.75,89-66,98H874c-33.17-8.22-53.69-27.85-65-58-3.38-9-8.61-27.37-5-42,1.75-7.11,3.55-17.11,7-24,5.53-11,36.65-35.65,49-41C866.78,404.06,876.28,405.93,882,402Z" fill-rule="evenodd"/>
@@ -38,6 +38,6 @@
   <path d="M1063,130c-3.38,2.5-7.73,2.08-12,4-8.55,3.83-20.26,15.38-24,24-15.14,34.9,19.37,78.9,59,68,22.57-6.21,45-34.23,31-66C1108.49,140.68,1091.62,129.49,1063,130Z" fill-rule="evenodd"/>
   </g>
   <g class='g_to_interact_with'  id="shadow_Image" data-name="shadow Image">
-    <image id="shadow_Image-2" data-name="shadow Image" width="1410" height="993" xlink:href="MasterNoelB2.png"/>
+    <image id="shadow_Image-2" data-name="shadow Image" width="1410" height="993" xlink:href="svg/MasterNoelB2.png"/>
   </g>
 </svg>
