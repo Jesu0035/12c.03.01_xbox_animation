@@ -1,0 +1,17 @@
+<svg id="Design" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 192.01 55.03">
+  <defs>
+    <radialGradient id="radial-gradient" cx="-1728.74" cy="-1390.5" r="115.12" gradientTransform="matrix(-1, 0, 0, -0.28, -1575.62, -197.06)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.15" stop-color="#7ba4b5"/>
+      <stop offset="0.27" stop-color="#719bae"/>
+      <stop offset="0.49" stop-color="#58849b"/>
+      <stop offset="0.72" stop-color="#346480"/>
+      <stop offset="0.76" stop-color="#2c5a76"/>
+      <stop offset="0.96" stop-color="#092b47"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="160.88" cy="170.05" r="123.04" gradientTransform="translate(0 81.14) scale(1 0.52)" xlink:href="#radial-gradient"/>
+  </defs>
+  <g>
+    <path d="M58.23,200.84c0-12.64,43-22.88,96-22.88s96,10.24,96,22.88-43,22.87-96,22.87S58.23,213.48,58.23,200.84Z" transform="translate(-58.23 -177.96)" fill="url(#radial-gradient)"/>
+    <path d="M58.23,210.12c0,12.63,43,22.87,96,22.87s96-10.24,96-22.87v-9.28c0,12.63-43,22.88-96,22.88s-96-10.25-96-22.88Z" transform="translate(-58.23 -177.96)" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>
