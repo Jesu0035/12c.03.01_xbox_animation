@@ -164,8 +164,8 @@ function flip(item) {
     document.querySelector('.hero-img').style.transform = "translateZ(0px)"
 
     setTimeout(() => {
-        document.querySelector('.card button').style.display = 'none'
-        console.log(item)
+        document.querySelector('.card a').style.display = 'none'
+        console.log(document.querySelector('.card a'))
 
         document.querySelector('.hero-img').src = item.firstElementChild.src
         if(direction) {
@@ -178,7 +178,7 @@ function flip(item) {
 
         setTimeout(() => {
             overlay.style.display = 'none'
-            document.querySelector('.card button').style.display = 'inherit'
+            document.querySelector('.card a').style.display = 'block'
         }, 700);
 
         setTimeout(() => {
