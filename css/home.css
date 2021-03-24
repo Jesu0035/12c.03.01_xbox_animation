@@ -203,7 +203,7 @@ header a {
 }
 
 
-button {
+.hero a {
     border: 2px solid;
     font: inherit;
     padding: .8em 2em;
@@ -211,12 +211,12 @@ button {
     transition: 1s ease;
 }
 
-.hero-text button {
+.hero-text a {
     color: white;
     background: #29abe2;
 }
 
-.card button {
+.card a {
     color: rgba(39, 90, 138);
     background: white;
     width: 100%;

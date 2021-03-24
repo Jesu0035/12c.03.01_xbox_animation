@@ -17,10 +17,10 @@ card.addEventListener("mouseenter", (e) => {
     document.querySelector('.hero-img').style.transform = "translateZ(80px)"
     document.querySelector('.display h3').style.transform = "translateZ(40px)"
     document.querySelector('.display p').style.transform = "translateZ(30px)"
-    document.querySelector('.display button').style.transform = "translateZ(20px)"
-    document.querySelector('.display button').style.background = '#29abe2'
-    document.querySelector('.display button').style.borderRadius = '20px'
-    document.querySelector('.display button').style.color = 'white'
+    document.querySelector('.display a').style.transform = "translateZ(20px)"
+    document.querySelector('.display a').style.background = '#29abe2'
+    document.querySelector('.display a').style.borderRadius = '20px'
+    document.querySelector('.display a').style.color = 'white'
     card.style.transition = "none";
 })
 
@@ -31,10 +31,10 @@ document.querySelector('.display').addEventListener("mouseleave", (e) => {
     document.querySelector('.display h3').style.transform = "translateZ(0px)"
 
     document.querySelector('.display p').style.transform = "translateZ(0px)"
-    document.querySelector('.display button').style.transform = "translateZ(0px)"
-    document.querySelector('.display button').style.background = 'white'
-    document.querySelector('.display button').style.borderRadius = '0px'
-    document.querySelector('.display button').style.color = 'initial'
+    document.querySelector('.display a').style.transform = "translateZ(0px)"
+    document.querySelector('.display a').style.background = 'white'
+    document.querySelector('.display a').style.borderRadius = '0px'
+    document.querySelector('.display a').style.color = 'initial'
 
 
     card.style.transition = "all 0.5s ease"
