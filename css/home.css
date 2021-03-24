@@ -296,7 +296,7 @@ header a {
 .stock {
     background: url(../images/home-page-images/sprinter.jpg);
     background-size: cover;
-    background-position: top;
+    background-attachment:fixed;
     height: 500px;
 }
 
