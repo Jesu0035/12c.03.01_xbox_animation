@@ -86,10 +86,10 @@ main>*
 }
 
 #phone-holder {
-  top: -26.5%;
+  top: -19%;
   left: 50%;
   transform: translateX(-50%);
-  width: 42%;
+  width: 32%;
 }
 
 #arrow-keys {
@@ -101,9 +101,9 @@ main>*
 #left-thumb,
 #right-thumb {
 
-  top: 25%;
-  left: 16%;
-  width: 15%;
+  top: 17%;
+  left: 17%;
+  width: 14%;
 }
 
 
@@ -121,15 +121,27 @@ main>*
   width: 20%;
 }
 
-
-#btn-red {
-
-  width: 50px;
+#badge {
+    top: 55%;
+    left: 5%;
+    width: 20%;
+    transform: rotate(20deg)
 }
 
+#dog {
+    top: 55%;
+    right: 5%;
+    width: 20%;
+    transform: rotate(-20deg)
+}
 
+.second-thumb {
 
-
+  top: 39%;
+  right: 30%;
+  width: 14%;
+    transform: rotate(-30deg)
+}
 
 #product-preview .hide {
   opacity: 0;
@@ -292,7 +304,7 @@ input[type=color] {
 
 #selected ul li img {
   width: auto;
-  height: 40px;
+  height: 120px;
 
 }
 
@@ -426,8 +438,24 @@ input[type=color] {
   }
 
     .img-container {
-        max-width: 550px;
+        max-width: 400px;
     }
+
+    #selected ul li img {
+  width: auto;
+  height: 40px;
+
+}
+
+
+#phone-holder {
+  top: 25%;
+  left: -18%;
+  width: 32%;
+    transform: rotate(-75deg)
+}
+
+
 
 
 }

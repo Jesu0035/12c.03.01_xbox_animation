@@ -18,7 +18,8 @@ let elementToPaint = ''
 
 async function start() {
 
-    let response = await fetch('http://quater.org/xbox-controller/svg/MasterNoelB-01.svg')
+
+    let response = await fetch('../svg/MasterNoelB-01.svg')
     let mySvgData = await response.text();
     document.querySelector('.main-product').innerHTML = mySvgData;
 
@@ -120,7 +121,6 @@ function toggleOption(event) {
                 alert('You can only pick one ' + target.parentElement.dataset.category + '. Deselect current element.')
             } else {
                 addFeature(target)
-                copyImage(target)
             }
 
         } else {
@@ -145,6 +145,11 @@ function toggleOption(event) {
 
         //Remove the hide class
         document.querySelector(`[data-feature="${feature}"`).classList.remove("hide")
+        const nameOfClass = document.querySelector(`#options [data-feature="${feature}"`).className
+        if(nameOfClass=='option thumbs chosen'){
+            console.log(feature)
+            document.querySelector(`#${feature}-second`).classList.remove("hide")
+        }
         //Create new featureElement and add it to the list
         const newfeatureElement = createFeatureElement(feature)
         document.querySelector("#selected ul").appendChild(newfeatureElement)
@@ -186,22 +191,23 @@ function toggleOption(event) {
         //Animation feature out
         theFeatureElement.classList = "animate-feature-out";
 
+        const nameOfClass = document.querySelector(`#options [data-feature="${feature}"`).className
+        console.log(nameOfClass)
+
 
         //when animation is complete, remove featureElement from the DOM
         theFeatureElement.addEventListener("animationend", function () {
+
+            if(nameOfClass=='option thumbs'){
+            console.log(document.querySelector(`.second-thumb`))
+            document.querySelector(`#${feature}-second`).classList.add("hide")
+        }
+
             theFeatureElement.remove();
             //Choose the feature element and hide it
             document.querySelector(`[data-feature=${feature}`).classList.add("hide");
 
-            const copy = document.querySelector('.copy')
 
-            copy.classList.add('hide')
-
-            console.log(copy)
-
-            copy.addEventListener('transitionend', () => {
-                copy.remove()
-            })
 
 
 
@@ -272,4 +278,13 @@ document.querySelectorAll('.option-color').forEach(color => {
     color.addEventListener('click', (e) => {
         document.querySelector('.selected-color').style.background = color.dataset.color
     })
+})
+
+document.querySelectorAll('.thumb').forEach(t => {
+    const copy = t.cloneNode(true)
+    copy.classList.remove('thumb')
+    copy.classList.add('second-thumb')
+    copy.id = t.id+'-second'
+    console.log(copy)
+    document.querySelector('.img-container').appendChild(copy)
 })
