@@ -398,7 +398,7 @@ input[type=color] {
     gap: 1em;
     height: 90%;
     grid-template-columns: 1fr;
-    grid-template-rows: 60% 20% 20%;
+    grid-template-rows: 35% 45% 20%;
     grid-template-areas:
       "product"
       "options"
@@ -425,7 +425,9 @@ input[type=color] {
     width: 100%;
   }
 
-
+    .img-container {
+        max-width: 550px;
+    }
 
 
 }

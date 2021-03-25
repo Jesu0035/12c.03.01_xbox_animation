@@ -76,11 +76,11 @@ gsap.from("#first img", {
 gsap.to("#second .watermark", {
     scrollTrigger: {
         trigger: "#second",
-        start: "-40% 20%",
+        start: "0% 10%",
         scrub: 3
     },
     duration: 2,
-    x: '20vw'
+    x: '200vw'
 });
 
 gsap.from("#third .watermark", {
@@ -96,6 +96,16 @@ gsap.from("#third .watermark", {
 gsap.to("#phone", {
     scrollTrigger: {
         trigger: "#third",
+        start: "30% 50%",
+        scrub: 1
+    },
+    duration: 2,
+    rotation: '60deg'
+});
+
+gsap.to("#yellow-controller", {
+    scrollTrigger: {
+        trigger: "#second",
         start: "30% 50%",
         scrub: 1
     },
