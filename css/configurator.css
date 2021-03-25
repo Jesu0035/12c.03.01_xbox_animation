@@ -146,6 +146,7 @@ main>*
 
 
 #options .option:hover,
+#options .option-color:hover,
 #options .option.chosen
  {
   background-color: #ddd;
@@ -234,9 +235,11 @@ figure:hover {
   height: 50px;
 }
 
+.color:hover {
+    transform: scale(1.2)
+}
 
 input[type=color] {
-
 
   top: 0;
   right: 0;

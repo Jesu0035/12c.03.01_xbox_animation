@@ -477,4 +477,13 @@ header a {
         font-size: 20px;
     }
 
+
+    .sub img {
+        width: 80%;
+    }
+
+    .stock {
+        height: 80vh
+    }
+
 }

@@ -29,7 +29,12 @@ async function start() {
 
 function startManiputaltionSvg() {
     document.querySelectorAll(".g_to_interact_with").forEach(eachG => {
-        eachG.style.fill = 'purple'
+
+        const initialColor = 'purple'
+
+        document.querySelector('.selected-color').style.background = initialColor
+        eachG.style.fill = initialColor
+
         eachG.addEventListener("click", theClick);
         eachG.addEventListener("mouseover", () => {
             console.log(2)
@@ -47,6 +52,8 @@ function startManiputaltionSvg() {
 
         document.querySelector('input[type=color] ').addEventListener('input', (e) => {
             eachG.style.fill = e.target.value
+            document.querySelector('.selected-color').style.background = e.target.value
+            console.log(e.target.value)
         })
 
         function colorClick() {
