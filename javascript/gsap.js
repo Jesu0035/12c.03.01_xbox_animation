@@ -70,7 +70,7 @@ gsap.from("#first img", {
         end: "20%",
         scrub: 3
     },
-    rotation: 60
+    rotation: -20
 });
 
 gsap.to("#second .watermark", {

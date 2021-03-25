@@ -86,11 +86,10 @@ main>*
 }
 
 #phone-holder {
-  width: 70px;
-  top: -32%;
+  top: -26.5%;
   left: 50%;
-  transform: translate(-50%);
-  width: 50%;
+  transform: translateX(-50%);
+  width: 42%;
 }
 
 #arrow-keys {

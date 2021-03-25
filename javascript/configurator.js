@@ -130,17 +130,7 @@ function toggleOption(event) {
 
     }
 
-    function copyImage(target) {
 
-        const previewImage = document.querySelector(`#product-preview [data-feature=${target.dataset.feature}`)
-        const copy = previewImage.cloneNode(true)
-        copy.classList.add('copy')
-        copy.id = 'copy'
-
-        console.log(copy)
-        document.querySelector('.img-container').appendChild(copy)
-        copy.classList.remove('hide')
-    }
 
     function addFeature(target) {
         //Select target and add chosen class
@@ -272,5 +262,7 @@ document.querySelectorAll('.option-color').forEach(color => {
 
     color.firstElementChild.textContent = capitalize(color.dataset.color)
     color.lastElementChild.style.background = color.dataset.color
-    color.addEventListener('click', (e) => {})
+    color.addEventListener('click', (e) => {
+        document.querySelector('.selected-color').style.background = color.dataset.color
+    })
 })
