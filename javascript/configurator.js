@@ -1,6 +1,12 @@
 "use strict";
 
-
+const features = {
+  Holder_phone: false,
+  black_botton: false,
+  red_botton: false,
+  gold: false,
+  solarfan: false
+};
 
 window.addEventListener("DOMContentLoaded", start);
 
