@@ -42,7 +42,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 30px 200px;
+    padding: 20px 200px;
 
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     transition: 1s;
@@ -85,7 +85,7 @@ header a:hover::after {
     background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(43, 43, 43), rgb(43, 43, 43));
 
     color: white;
-    padding: 19px 200px;
+    padding: 10px 200px;
 }
 
 .logo {
@@ -385,10 +385,14 @@ header a:hover::after {
 
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1552px) {
     .hero {
         grid-template-columns: 1fr 1fr;
         padding: 120px 100px;
+    }
+
+    .wrapper {
+        max-width: 40vw;
     }
 
     .item {
@@ -419,7 +423,6 @@ header a:hover::after {
     header {
         display: flex;
         flex-direction: column;
-        height: 120px;
     }
 
     .logo {
