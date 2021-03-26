@@ -164,6 +164,7 @@ header a {
     font-size: 1.8em;
     margin-bottom: 10px;
 }
+
 .card p {
     margin-bottom: 20px;
 }
@@ -289,7 +290,7 @@ header a {
     width: 200px;
 }
 
-.card>* {
+.card > * {
     transition: 1s ease;
 }
 
@@ -316,7 +317,7 @@ header a {
 .stock {
     background: url(../images/home-page-images/sprinter.jpg);
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
     height: 500px;
 }
 
@@ -406,7 +407,15 @@ header a {
     header {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        height: 120px;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+
+     .nav {
+        margin-bottom: 20px;
     }
 
     .hero {
@@ -419,7 +428,7 @@ header a {
 
     }
 
-    .hero>* {
+    .hero > * {
         margin: 20px 5px;
     }
 
@@ -484,6 +493,24 @@ header a {
 
     .stock {
         height: 80vh
+    }
+
+    [data-value="previous"] {
+        left: 20px;
+        top: -40px
+    }
+
+    [data-value="next"] {
+        right: 20px;
+        top: -40px
+    }
+    .hero-img {
+        transform: translate(0%) scale(1) rotate(0deg);
+    }
+
+
+    .wrapper {
+        max-width: 90vw;
     }
 
 }
