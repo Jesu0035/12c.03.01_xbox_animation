@@ -8,7 +8,7 @@
             setTimeout(() => {
                 document.querySelector('.stage').remove()
                 logo = document.createElement('img')
-                logo.src = 'http://quater.org/xbox-controller/images/home-page-images/logo.svg'
+                logo.src = '../images/home-page-images/logo.svg'
                 logo.classList.add('logo')
                 document.querySelector('main').appendChild(logo)
             }, 1000);
