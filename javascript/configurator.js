@@ -1,13 +1,6 @@
 "use strict";
 
-// The model of all features
-const features = {
-    Holder_phone: false,
-    led: false,
-    propeller: false,
-    shield_black: false,
-    solarfan: false
-};
+
 
 let onlyOne = true
 
@@ -18,7 +11,7 @@ let elementToPaint = ''
 
 async function start() {
 
-    let response = await fetch('../svg/MasterNoelB-01.svg')
+    let response = await fetch('http://quater.org/xbox-controller/svg/MasterNoelB-01.svg')
     let mySvgData = await response.text();
     document.querySelector('.main-product').innerHTML = mySvgData;
 
@@ -79,12 +72,12 @@ function theClick(e) {
     console.log(elementToPaint)
     this.style.fill = elementToPaint
 }
-/* this function make the lines blue so we can select the place  */
+
 function theMouseover() {
     console.log(this)
     this.style.stroke = "blue"
 }
-/* this function makes desapear the blue stroke when we move the mouse */
+
 function theMouseout() {
     console.log(this)
     this.style.stroke = "none"
@@ -96,7 +89,6 @@ function toggleOption(event) {
     const target = event.currentTarget;
     const feature = target.dataset.feature;
 
-    // TODO: Toggle feature in "model"
     features[feature] = !features[feature];
 
     if (features[feature] === true) {
@@ -140,17 +132,15 @@ function toggleOption(event) {
 
 
     function addFeature(target) {
-        //Select target and add chosen class
+
         target.classList.add("chosen")
 
-        //Remove the hide class
+
         document.querySelector(`[data-feature="${feature}"`).classList.remove("hide")
-        //Create new featureElement and add it to the list
+
         const newfeatureElement = createFeatureElement(feature)
         document.querySelector("#selected ul").appendChild(newfeatureElement)
-        // feature added
 
-        //FLIP
         const start = target.lastElementChild.getBoundingClientRect();
         const end = newfeatureElement.getBoundingClientRect();
 
@@ -183,14 +173,12 @@ function toggleOption(event) {
 
         theFeatureElement.offsetHeight;
 
-        //Animation feature out
         theFeatureElement.classList = "animate-feature-out";
 
 
-        //when animation is complete, remove featureElement from the DOM
         theFeatureElement.addEventListener("animationend", function () {
             theFeatureElement.remove();
-            //Choose the feature element and hide it
+
             document.querySelector(`[data-feature=${feature}`).classList.add("hide");
 
             const copy = document.querySelector('.copy')
@@ -214,9 +202,7 @@ function toggleOption(event) {
 }
 
 
-// Create featureElement to be appended to #selected ul - could have used a <template> instead
 function createFeatureElement(feature) {
-    //Create an li element and add feature img into it
     const li = document.createElement("li");
     li.dataset.feature = feature;
 
@@ -224,7 +210,6 @@ function createFeatureElement(feature) {
     img.src = `images/configurator-images/${feature}.png`;
     img.alt = capitalize(feature);
 
-    //Add the li element
     li.append(img);
 
     return li;
