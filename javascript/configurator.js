@@ -141,7 +141,7 @@ function toggleOption(event) {
 
     function addFeature(target) {
         //Select target and add chosen class
-        target.classList.add("chosen")
+        target.classList.toggle("chosen")
 
         //Remove the hide class
         document.querySelector(`[data-feature="${feature}"`).classList.remove("hide")
