@@ -276,6 +276,7 @@ document.querySelectorAll('.option-color').forEach(color => {
     color.firstElementChild.textContent = capitalize(color.dataset.color)
     color.lastElementChild.style.background = color.dataset.color
     color.addEventListener('click', (e) => {
+        e.target.classList.add("chosen")
         document.querySelector('.selected-color').style.background = color.dataset.color
     })
 })
