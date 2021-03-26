@@ -140,7 +140,7 @@ main>*
   top: 39%;
   right: 30%;
   width: 14%;
-    transform: rotate(-30deg)
+    transform: rotate(30deg)
 }
 
 #product-preview .hide {
