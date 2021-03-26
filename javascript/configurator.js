@@ -11,7 +11,7 @@ let elementToPaint = ''
 
 async function start() {
 
-    let response = await fetch('http://quater.org/xbox-controller/svg/MasterNoelB-01.svg')
+    let response = await fetch('../svg/MasterNoelB-01.svg')
     let mySvgData = await response.text();
     document.querySelector('.main-product').innerHTML = mySvgData;
 
