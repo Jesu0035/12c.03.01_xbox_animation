@@ -65,25 +65,6 @@ nav {
 header a {
     font-size: 1.1em;
     color: inherit;
-    position: relative;
-
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    right: -10px;
-    height: 1px;
-    bottom: -5px;
-    background: #29abe2;
-    opacity: 0;
-    transition: 1s;
-
-}
-
-header a:hover::after {
-    opacity: 1
 
 }
 
@@ -125,13 +106,14 @@ header a:hover::after {
 
 .hero {
     color: azure;
+    /* background-image: radial-gradient(circle at bottom right, rgb(52, 33, 141) 0%, rgb(52, 33, 141) 20%, rgb(52, 50, 168) 20%, rgb(52, 50, 168) 40%, rgb(52, 68, 195) 40%, rgb(52, 68, 195) 60%, rgb(52, 85, 221) 60%, rgb(52, 85, 221) 80%, rgb(52, 102, 248) 80%, rgb(52, 102, 248) 100%);
+     */
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
     grid-column-gap: 190px;
     padding: 200px;
-    /* found the backgrounds at gradientmagic.com */
     background-image: radial-gradient(circle at center center, rgba(33, 33, 33, 0), rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px, transparent 6px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
     background-image: radial-gradient(circle at center center, rgba(33, 33, 33, 0), rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(45deg, rgb(56, 56, 56) 0px, rgb(56, 56, 56) 5px, transparent 5px, transparent 6px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
     background-image: repeating-linear-gradient(45deg, rgba(97, 97, 97, 0.1) 0px, rgba(97, 97, 97, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(43, 43, 43), rgb(43, 43, 43));
@@ -180,11 +162,10 @@ header a:hover::after {
 
 .card h3 {
     font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.card p {
     margin-bottom: 20px;
+}
+.card p {
+    margin-bottom: 30px;
 }
 
 .card a {
@@ -308,7 +289,7 @@ header a:hover::after {
     width: 200px;
 }
 
-.card > * {
+.card>* {
     transition: 1s ease;
 }
 
@@ -335,7 +316,7 @@ header a:hover::after {
 .stock {
     background: url(../images/home-page-images/sprinter.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment:fixed;
     height: 500px;
 }
 
@@ -425,15 +406,7 @@ header a:hover::after {
     header {
         display: flex;
         flex-direction: column;
-        height: 120px;
-    }
-
-    .logo {
-        margin-top: 20px;
-    }
-
-     .nav {
-        margin-bottom: 20px;
+        padding: 20px;
     }
 
     .hero {
@@ -446,7 +419,7 @@ header a:hover::after {
 
     }
 
-    .hero > * {
+    .hero>* {
         margin: 20px 5px;
     }
 
@@ -511,24 +484,6 @@ header a:hover::after {
 
     .stock {
         height: 80vh
-    }
-
-    [data-value="previous"] {
-        left: 20px;
-        top: -40px
-    }
-
-    [data-value="next"] {
-        right: 20px;
-        top: -40px
-    }
-    .hero-img {
-        transform: translate(0%) scale(1) rotate(0deg);
-    }
-
-
-    .wrapper {
-        max-width: 90vw;
     }
 
 }
