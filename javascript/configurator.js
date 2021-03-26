@@ -2,9 +2,6 @@
 
 
 
-let onlyOne = true
-
-
 window.addEventListener("DOMContentLoaded", start);
 
 let elementToPaint = ''
